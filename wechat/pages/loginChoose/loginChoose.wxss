@@ -1,0 +1,26 @@
+/* pages/loginChoose/loginChoose.wxss */
+.container{
+  background-color: var(--theme-color);
+  color: #fff;
+  height: 100vh;
+}
+.container view:first-child{
+  padding: 100rpx 0;
+  text-align: center;
+  color: #fff;
+}
+.container i{
+  font-size: 100rpx;
+}
+.container view:last-child{
+  position: absolute;
+  bottom: 300rpx;
+  text-align: center;
+  width: 100%;
+}
+.container a{
+  padding: 10rpx 100rpx;
+  background-color: #fff;
+  color: var(--theme-color);
+  border-radius: 50rpx;
+}
