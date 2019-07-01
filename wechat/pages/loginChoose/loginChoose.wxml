@@ -1,0 +1,9 @@
+<!--pages/loginChoose/loginChoose.wxml-->
+<view class='container'>
+  <view>
+    <i class="iconfont iconyinlemusic216"></i>
+  </view>
+  <view>
+    <a bindtap="toLogin">手机号登录</a>
+  </view>
+</view>
