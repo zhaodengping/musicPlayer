@@ -1,2 +1,21 @@
 <!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view class='container'>
+  <view class='form'>
+    <wux-form id="wux-form" bind:change="onChange">
+      <wux-cell hover-class="none">
+        <wux-field name="phone">
+          <wux-input label="手机号" placeholder="请输入手机号"/>
+        </wux-field>
+      </wux-cell>
+        <wux-cell hover-class="none">
+          <wux-field name="password">
+            <wux-input label="密码" placeholder='请输入密码'/>
+          </wux-field>
+        </wux-cell>
+      <view class="btn-area">
+        <wux-button block type="assertive" bindtap='login'>登录</wux-button>
+      </view>
+    </wux-form>
+    <view class='reg' bindtap='toReg'>还未注册，去注册<i class="iconfont iconiconfontzhizuobiaozhun47-copy"></i></view>
+  </view>
+</view>

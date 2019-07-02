@@ -2,8 +2,50 @@
   "pages": [
     "pages/index/index",
     "pages/loginChoose/loginChoose",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/reg/reg",
+    "pages/home/home",
+    "pages/video/video",
+    "pages/my/my",
+    "pages/friends/friends",
+    "pages/account/account",
+    "pages/playList/playList"
   ],
+  "tabBar": {
+    "selectedColor": "#DC2B23",
+    "list": [
+      {
+        "iconPath": "/assets/imgs/tabbar/discovery.png",
+        "selectedIconPath": "/assets/imgs/tabbar/discovery-selected.png",
+        "pagePath": "pages/home/home",
+        "text": "发现"
+      },
+      {
+        "iconPath": "/assets/imgs/tabbar/video.png",
+        "selectedIconPath": "/assets/imgs/tabbar/video-selected.png",
+        "pagePath": "pages/video/video",
+        "text": "视频"
+      },
+      {
+        "iconPath": "/assets/imgs/tabbar/my.png",
+        "selectedIconPath": "/assets/imgs/tabbar/my-selected.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      },
+      {
+        "iconPath": "/assets/imgs/tabbar/friends.png",
+        "selectedIconPath": "/assets/imgs/tabbar/friends-selected.png",
+        "pagePath": "pages/friends/friends",
+        "text": "朋友"
+      },
+      {
+        "iconPath": "/assets/imgs/tabbar/account.png",
+        "selectedIconPath": "/assets/imgs/tabbar/account-selected.png",
+        "pagePath": "pages/account/account",
+        "text": "账号"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#DC2B23",
