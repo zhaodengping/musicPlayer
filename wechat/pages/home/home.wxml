@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view class='tabbar'>
+    <wux-search-bar/>
+  </view>
+  <swiper indicator-dots="true" autoplay="true" class='home-swiper'>
+    <block wx:for="{{bannerList}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.picUrl}}" class="slide-image" mode='widthFix'/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='nav'>
+    <view bindtap='toPlayList'>
+      <view class='icon'><i class='iconfont iconicon-'></i></view>
+      <view>歌单</view>
+    </view>
+  </view>
+</view>

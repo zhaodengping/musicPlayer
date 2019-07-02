@@ -1,1 +1,22 @@
 /* pages/login/login.wxss */
+.container{
+  height: 100vh;
+}
+.form{
+  width: 80%;
+  margin: 300rpx auto;
+}
+.btn-area{
+  margin-top: 60rpx;
+}
+.reg{
+  position: absolute;
+  bottom: 100rpx;
+  width: 80%;
+  text-align: center;
+  font-size: 26rpx;
+  color: var(--theme-color);
+}
+.reg i{
+  margin-left: 5rpx;
+}

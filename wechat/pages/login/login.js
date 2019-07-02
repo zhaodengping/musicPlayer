@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    loginInfo:{
+      phone:"",
+      password:""
+    }
   },
 
   /**
@@ -28,7 +31,26 @@ Page({
   onShow: function () {
 
   },
-
+  onChange(e){
+    let allValues=e.detail.allValues;
+    this.data.loginInfo.phone=allValues.phone;
+    this.data.loginInfo.password=allValues.password;
+  },
+  login(){
+    wx.request({
+      url: `http://musicapi.leanapp.cn/login/cellphone`,
+      method:"get",
+      data: { phone:this.data.loginInfo.phone,password:this.data.loginInfo.password},
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+    })
+  },
+  toReg(){
+    wx.navigateTo({
+      url: '../reg/reg',
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
