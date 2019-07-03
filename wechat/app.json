@@ -9,7 +9,8 @@
     "pages/my/my",
     "pages/friends/friends",
     "pages/account/account",
-    "pages/playList/playList"
+    "pages/playList/playList",
+    "pages/allPlayList/allPlayList"
   ],
   "tabBar": {
     "selectedColor": "#DC2B23",

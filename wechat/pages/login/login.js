@@ -37,13 +37,8 @@ Page({
     this.data.loginInfo.password=allValues.password;
   },
   login(){
-    wx.request({
-      url: `http://musicapi.leanapp.cn/login/cellphone`,
-      method:"get",
-      data: { phone:this.data.loginInfo.phone,password:this.data.loginInfo.password},
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
+    wx.redirectTo({
+      url: '../home/home',
     })
   },
   toReg(){

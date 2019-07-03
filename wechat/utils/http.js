@@ -16,6 +16,9 @@ export default function http({method='GET',url,data}){
       },
       fail:err=>{
         showFail(err.errMsg)
+      },
+      complete:err=>{
+        wx.hideLoading()
       }
     })
   })

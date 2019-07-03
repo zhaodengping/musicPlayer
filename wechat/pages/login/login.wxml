@@ -13,7 +13,7 @@
           </wux-field>
         </wux-cell>
       <view class="btn-area">
-        <wux-button block type="assertive" bindtap='login'>登录</wux-button>
+        <wux-button block type="assertive" bind:click='login'>登录</wux-button>
       </view>
     </wux-form>
     <view class='reg' bindtap='toReg'>还未注册，去注册<i class="iconfont iconiconfontzhizuobiaozhun47-copy"></i></view>

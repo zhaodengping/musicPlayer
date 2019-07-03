@@ -1,1 +1,17 @@
 /* pages/playList/playList.wxss */
+.more{
+  position: absolute;
+  right: 0;
+  top: 0;  
+  display: flex;  
+  align-items: center;
+  padding-left: 30rpx;
+  width: 60rpx;
+  height: 88rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow:-5px 0 10px -5px #D8D3D0;
+}
+.more i{
+  font-size: 30rpx;
+}
