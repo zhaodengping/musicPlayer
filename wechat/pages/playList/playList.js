@@ -1,18 +1,20 @@
 // pages/playList/playList.js
+import http from '../../utils/http.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    currentTab:0,
+    tags:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getTags()
   },
 
   /**
@@ -28,7 +30,26 @@ Page({
   onShow: function () {
 
   },
-  
+  onChange(e) {
+    this.setData({
+      currentTab: e.detail.key,
+    })
+  },
+  getTags(){
+    let url ={
+      url: `/playlist/hot`
+    }
+    http(url).then(res=>{
+      this.setData({
+        tags:res.tags
+      })
+    })
+  },
+  getMoreTags(){
+    wx.navigateTo({
+      url: '../allPlayList/allPlayList',
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

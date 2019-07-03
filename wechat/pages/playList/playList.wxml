@@ -1,2 +1,6 @@
 <!--pages/playList/playList.wxml-->
-<text>pages/playList/playList.wxml</text>
+<wux-tabs controlled scroll current="{{ currentTab }}" bindchange="onChange" theme="assertive" class="tabs">
+  <wux-tab key="0" title="全部"></wux-tab>
+  <wux-tab key="{{index+1}}" title="{{item.name}}" wx:for="{{tags}}" wx:key="{{index}}"></wux-tab> 
+</wux-tabs>
+<view class='more' bindtap='getMoreTags'><i class="iconfont icongengduo"></i></view>

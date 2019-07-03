@@ -46,8 +46,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "home",
-					"pathName": "pages/home/home",
+					"name": "歌单",
+					"pathName": "pages/allPlayList/allPlayList",
 					"query": "",
 					"scene": null
 				}

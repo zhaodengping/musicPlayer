@@ -33,8 +33,17 @@ function showFail(e="失败"){
   })
 }
 
+//loading
+function showLoading(e="玩命加载中"){
+  wx.showLoading({
+    title: e,
+    mask: true
+  })
+}
+
 module.exports = {
   formatTime,
   showSuccess,
-  showFail
+  showFail,
+  showLoading
 }

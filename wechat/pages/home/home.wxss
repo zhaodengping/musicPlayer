@@ -1,6 +1,9 @@
 /* pages/home/home.wxss */
 .home-swiper{
-  margin: 10rpx;
+  margin: 20rpx;
+}
+swiper{
+  height: 280rpx;
 }
 .slide-image{
   width: 100%;
