@@ -2,11 +2,11 @@
 <view class='wrap'>
   <view class='myPlayList'>我的歌单广场</view>
   <view>
-    <view wx:for="{{allTags}}" wx:key="{{item.category}}" wx:for-index="tagsIndex">
+    <view wx:for="{{allTags}}" wx:key="{{item.category}}">
       <view class='tagName'>{{item.name}}</view>
       <wux-row>
-        <wux-col span="3" wx:for="{{item.sub}}" wx:for-item="subItem" wx:key="{{index}}" wx:for-index="subIndex">
-          <view class="subTags {{ subItem.isSelected?'selected':''}}" bindtap='selectTags' data-index="{{tagsIndex}}" data-subIndex='{{subIndex}}'>
+        <wux-col span="3" wx:for="{{item.sub}}" wx:for-item="subItem" wx:key="{{index}}">
+          <view class="subTags" bindtap='selectTags' data-tagsName='{{subItem.name}}'>
             <i class="iconfont iconremen" wx:if="{{subItem.hot}}"></i>{{subItem.name}}
           </view>
         </wux-col>

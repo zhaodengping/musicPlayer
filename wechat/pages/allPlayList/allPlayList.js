@@ -10,7 +10,6 @@ Page({
    */
   data: {
     allTags: [],
-    isSelected: false,
   },
 
   /**
@@ -54,7 +53,6 @@ Page({
           if (item.category == item2.category) {
             item2.sub.push({
               name: item.name,
-              isSelected: false,
               hot: item.hot
             })
           }
@@ -66,13 +64,11 @@ Page({
     })
   },
   selectTags(e) {
-    let dataset = e.currentTarget.dataset
-    let subItemSelected = `allTags[${dataset.index}].sub[${dataset.subindex}].isSelected`
-    this.setData({
-      [subItemSelected]: true
-    })
-    wx.redirectTo({
-      url:'../playList/playList'
+    let tagName = e.currentTarget.dataset.tagsname
+    console.log(e)
+    wx.setStorageSync("tagName", tagName)
+    wx.navigateBack({
+      delta: 2
     })
   },
   /**
