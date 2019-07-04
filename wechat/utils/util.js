@@ -24,6 +24,13 @@ function showSuccess(e="成功"){
     mask:true
   })
 }
+function show(e="没有更多数据啦！"){
+  wx.showToast({
+    title: e,
+    duration: 2000,
+    mask: true
+  })
+}
 function showFail(e="失败"){
   wx.showToast({
     title: e,
@@ -43,6 +50,7 @@ function showLoading(e="玩命加载中"){
 
 module.exports = {
   formatTime,
+  show,
   showSuccess,
   showFail,
   showLoading
