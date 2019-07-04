@@ -41,7 +41,7 @@ Page({
     })
   },
   getSomeSongs(){
-    let url = `/top/playlist?limit=${this.data.limit}&tag=${this.data.tagsLocal}`;
+    let url = `/top/playlist?limit=${this.data.limit}&cat=${this.data.tagsLocal}`;
     http({url}).then(res=>{
       res.playlists.forEach(item=>{
         let {number,flag}=changeNumberUnit(item.playCount)
@@ -52,7 +52,12 @@ Page({
       this.setData({
         songList
       })
-      console.log(this.data.songList)
+    })
+  },
+  toSongsList(e){
+    let songId = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `../songs/songs?songIs=${songId}`,
     })
   },
   /**

@@ -21,7 +21,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.songs view{
+.songs>view{
+  position: relative;
   margin-top: 10rpx;
   margin-bottom: 20rpx;
   width: 30%;
@@ -41,4 +42,17 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+.play-count{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #F5F9FB;
+}
+.play-count i{
+  margin-right: 10rpx;
+  font-size: 22rpx;
 }
