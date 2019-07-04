@@ -1,6 +1,6 @@
 // pages/playList/playList.js
 import http from '../../utils/http.js'
-import { showLoading, show} from '../../utils/util.js'
+import { showLoading, show, changeNumberUnit} from '../../utils/util.js'
 Page({
 
   /**
@@ -50,7 +50,6 @@ Page({
       this.setData({
         tags:res.tags
       })
-      console.log(this.data.tags)
     })
   },
   getMoreTags(){
@@ -74,16 +73,23 @@ Page({
       url = `${url}&tag=${this.data.tagLocal}`;
     }
     http({url}).then(res=>{
+      res.playlists.forEach(item=>{
+        item.newPlayCount=item.playCount
+      })
       let playlists=[...this.data.playlists,...res.playlists]
       this.setData({
         playlists
       })
+      
     })
   },
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    this.setData({
+      playlists: []
+    })
     wx.removeStorageSync("tags")
   },
 
@@ -98,22 +104,22 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log("下拉")
+    this.data.limit = 18;
+    showLoading();
+    this.getSongs()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log("上拉")
     if(this.data.limit<99){//这边应该是歌曲的总条数，但是目前不知道这个字段是什么，暂时用固定值
       this.data.limit += 18;
       showLoading();
       this.getSongs();
     }else{
       show();
-    }
-    
+    }    
   },
 
   /**

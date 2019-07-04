@@ -1,0 +1,40 @@
+/* pages/otherPlayList/otherPlayList.wxss */
+.wrap{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.wrap>view{
+  position: relative;
+  margin-bottom: 20rpx;
+  width: 30%;
+}
+.wrap view image{
+  border-radius: 10rpx;
+  width: 100%;
+}
+.wrap view text{
+  font-size: 22rpx;
+  line-height: 26rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.play-count{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #F5F9FB;
+}
+.play-count i{
+  margin-right: 10rpx;
+  font-size: 22rpx;
+}

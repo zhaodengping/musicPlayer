@@ -47,7 +47,7 @@
 				{
 					"id": 0,
 					"name": "歌单",
-					"pathName": "pages/playList/playList",
+					"pathName": "pages/otherPlayList/otherPlayList",
 					"query": "",
 					"scene": null
 				}

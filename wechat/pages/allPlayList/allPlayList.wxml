@@ -6,7 +6,7 @@
       <view class='tagName'>{{item.name}}</view>
       <wux-row>
         <wux-col span="3" wx:for="{{item.sub}}" wx:for-item="subItem" wx:key="{{index}}">
-          <view class="subTags" bindtap='selectTags' data-tagsName='{{subItem.name}}'>
+          <view class="subTags" bindtap='selectTags' data-tagsItem='{{subItem}}'>
             <i class="iconfont iconremen" wx:if="{{subItem.hot}}"></i>{{subItem.name}}
           </view>
         </wux-col>
