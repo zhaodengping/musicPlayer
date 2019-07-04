@@ -1,38 +1,20 @@
-/* pages/playList/playList.wxss */
-.more{
-  position: absolute;
-  right: 0;
-  top: 0;  
-  display: flex;  
-  align-items: center;
-  padding-left: 30rpx;
-  width: 60rpx;
-  height: 88rpx;
-  background-color: #fff;
-  border-radius: 10rpx;
-  box-shadow:-5px 0 10px -5px #D8D3D0;
-}
-.more i{
-  font-size: 30rpx;
-}
-.songs{
-  margin: 20rpx;
+/* pages/otherPlayList/otherPlayList.wxss */
+.wrap{
+  margin-top: 20rpx;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
-.songs>view{
+.wrap>view{
   position: relative;
-  margin-top: 10rpx;
   margin-bottom: 20rpx;
   width: 30%;
-  height: 280rpx;
 }
-.songs view image{
-  width: 100%;
+.wrap view image{
   border-radius: 10rpx;
+  width: 100%;
 }
-.songs view text{
+.wrap view text{
   font-size: 22rpx;
   line-height: 26rpx;
   text-overflow: -o-ellipsis-lastline;

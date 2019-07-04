@@ -64,13 +64,21 @@ Page({
     })
   },
   selectTags(e) {
-    let tagName = e.currentTarget.dataset.tagsname
-    console.log(e)
-    wx.setStorageSync("tagName", tagName)
-    wx.navigateBack({
-      delta: 2
-    })
+    let item = e.currentTarget.dataset.tagsitem;
+    let name = item.name;
+    let hot=item.hot
+    wx.setStorageSync("tagName", name)
+    if(hot){
+      wx.navigateBack({
+        delta: 2
+      })
+    }else{
+      wx.navigateTo({
+        url: '../otherPlayList/otherPlayList',
+      })
+    }    
   },
+  
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -82,7 +90,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-
+    wx.removeStorageSync("tagName")
   },
 
   /**

@@ -1,14 +1,19 @@
 <!--pages/playList/playList.wxml-->
 <wux-tabs controlled scroll current="{{ currentTab }}" bindchange="onChange" theme="assertive" class="tabs">
-  <wux-tab key="0" title="全部"></wux-tab>
-  <wux-tab key="{{index+1}}" title="{{item.name}}" wx:for="{{tags}}" wx:key="{{index}}"></wux-tab>
+  <wux-tab key="全部" title="全部"></wux-tab>
+  <wux-tab key="{{item.name}}" title="{{item.name}}" wx:for="{{tags}}" wx:key="{{index}}"></wux-tab>
 </wux-tabs>
 <view class='more' bindtap='getMoreTags'>
   <i class="iconfont icongengduo"></i>
 </view>
 <view class='songs'>
-  <view wx:for="{{playlists}}" wx:key="index">
+  <view wx:for="{{playlists}}" wx:key="index"  bindtap='toSongsList' data-id='{{item.id}}'>
     <image src='{{item.coverImgUrl}}' mode='widthFix'></image>
     <text>{{item.name}}</text>
+    <view class='play-count'>
+      <i class="iconfont iconicon-1"></i>
+      <view>{{item.newPlayCount}}</view>
+      <text wx:if="{{item.unitFlag}}">万</text>
+    </view>
   </view>
 </view>

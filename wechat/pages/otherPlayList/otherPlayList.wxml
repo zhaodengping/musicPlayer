@@ -1,0 +1,12 @@
+<!--pages/otherPlayList/otherPlayList.wxml-->
+<view class='wrap'>
+  <view wx:for="{{songList}}" wx:key="index" bindtap='toSongsList' data-id='{{item.id}}'>
+    <image src="{{item.coverImgUrl}}" mode='widthFix'></image>
+    <text>{{item.name}}</text>
+    <view class='play-count'>
+      <i class="iconfont iconicon-1"></i>
+      <view>{{item.newPlayCount}}</view>
+      <text wx:if="{{item.unitFlag}}">万</text>
+    </view>
+  </view>
+</view>

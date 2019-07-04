@@ -48,10 +48,27 @@ function showLoading(e="玩命加载中"){
   })
 }
 
+// 数值大于100万以100万形式展示，小于的话，为10000
+function changeNumberUnit(e){
+  let flag=0
+  if(e){
+    if(e>=1000000){
+      let number = Math.floor(e / 10000) ;
+      flag=1
+      return {number,flag}
+    }else{
+      return{number:e,flag}
+    }
+  }else{
+    return {number:0,flag}
+  }
+}
+
 module.exports = {
   formatTime,
   show,
   showSuccess,
   showFail,
-  showLoading
+  showLoading,
+  changeNumberUnit
 }
