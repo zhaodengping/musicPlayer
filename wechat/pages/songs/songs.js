@@ -1,6 +1,6 @@
 // pages/songs/songs.js
 import http from '../../utils/http.js'
-import {showLoading} from '../../utils/util.js'
+import { showLoading, changeNumberUnit} from '../../utils/util.js'
 Page({
 
   /**
@@ -9,6 +9,13 @@ Page({
   data: {
     songId:"",
     playList:null,
+    play:{
+      number:0,
+      flag:0
+    },
+    commentCount:0,
+    shareCount:0,
+    trackCount:0,
   },
 
   /**
@@ -35,8 +42,17 @@ Page({
   getSongs(){
     let url =`/playlist/detail?id=${this.data.songId}`;
     http({url}).then(res=>{
+      let { number, flag } = changeNumberUnit(res.playlist.playCount)
+      let play={
+        number,
+        flag:flag
+      }
       this.setData({
-        playList:res.playlist
+        playList:res.playlist,
+        play,
+        commentCount: res.playlist.commentCount,
+        shareCount:res.playlist.shareCount,
+        trackCount: res.playlist.trackCount
       })
     })
   },
