@@ -97,7 +97,7 @@ Page({
   toSongsList(e) {
     let songId = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `../songs/songs?songIs=${songId}`,
+      url: `../songs/songs?songId=${songId}`,
     })
   },
   /**

@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "歌单",
+  "usingComponents": {
+    "wux-search-bar": "/miniprogram_npm/wux-weapp/search-bar/index",
+    "wux-avatar": "/miniprogram_npm/wux-weapp/avatar/index"
+  }
 }
