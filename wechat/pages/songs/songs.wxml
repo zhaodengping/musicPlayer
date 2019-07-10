@@ -1,2 +1,20 @@
 <!--pages/songs/songs.wxml-->
-<text>pages/songs/songs.wxml</text>
+<view>
+  <view>
+    <!-- 未完待续 -->
+    <wux-search-bar clear />
+  </view>
+  <view class='cover'>
+    <image src="{{playList.coverImgUrl}}" class='bgImg'></image>
+    <view class='cover-title'>
+      <image src="{{playList.coverImgUrl}}"  mode='widthFix'></image>
+      <view>
+        <view class='titleName'>{{playList.name}}</view>
+        <view>
+          <wux-avatar size="small" src="{{playList.creator.avatarUrl}}" />
+          <text>{{playList.creator.nickname}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

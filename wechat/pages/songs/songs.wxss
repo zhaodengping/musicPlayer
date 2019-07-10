@@ -1,1 +1,31 @@
 /* pages/songs/songs.wxss */
+.bgImg{
+  transform: scale(1.5);
+  filter: blur(20px);
+}
+.cover{
+  position: relative;
+  width: 100%;
+}
+.cover-title{
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 95%
+}
+.cover-title>view{
+  width: 50%;
+}
+.cover-title image{
+  width: 45%;
+  border-radius: 10rpx;
+}
+.titleName{
+  font-size: 34rpx;
+  color: #fff;
+  white-space:normal;
+}

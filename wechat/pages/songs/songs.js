@@ -1,20 +1,24 @@
 // pages/songs/songs.js
+import http from '../../utils/http.js'
+import {showLoading} from '../../utils/util.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    songId:"",
+    playList:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    showLoading();
+    this.data.songId=options.songId;
+    this.getSongs()
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -28,7 +32,14 @@ Page({
   onShow: function () {
 
   },
-
+  getSongs(){
+    let url =`/playlist/detail?id=${this.data.songId}`;
+    http({url}).then(res=>{
+      this.setData({
+        playList:res.playlist
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
