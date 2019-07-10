@@ -7,14 +7,47 @@
   <view class='cover'>
     <image src="{{playList.coverImgUrl}}" class='bgImg'></image>
     <view class='cover-title'>
-      <image src="{{playList.coverImgUrl}}"  mode='widthFix'></image>
+      <image src="{{playList.coverImgUrl}}" mode='widthFix'></image>
+      <text class='playCount'>
+        <text class='iconfont iconicon-1'></text>
+      <text>{{play.number}}<text wx:if="{{play.flag}}">万</text></text>
+      </text>
       <view>
         <view class='titleName'>{{playList.name}}</view>
-        <view>
+        <view class='name'>
           <wux-avatar size="small" src="{{playList.creator.avatarUrl}}" />
-          <text>{{playList.creator.nickname}}</text>
+          <view class='nickName'>{{playList.creator.nickname}}</view>
+          <text class='iconfont iconjiantou'></text>
+        </view>
+        <view class='description'>
+          <view>{{playList.description}}</view>
+          <text class='iconfont iconjiantou'></text>
         </view>
       </view>
+    </view>
+    <view class='other-operation'>
+      <view>
+        <view class='iconfont iconicon--'></view>
+        <view>{{commentCount}}</view>
+      </view>
+      <view>
+        <view class='iconfont iconfenxiang'></view>
+        <view>{{shareCount}}</view>
+      </view>
+      <view>
+        <view class='iconfont iconxiazai'></view>
+        <view>下载</view>
+      </view>
+      <view>
+        <view class='iconfont iconxuanze-duoxuan-tianchong'></view>
+        <view>多选</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view>
+      <text class='iconfont iconbofang'></text>
+      
     </view>
   </view>
 </view>

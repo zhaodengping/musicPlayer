@@ -1,13 +1,16 @@
 /* pages/songs/songs.wxss */
-.bgImg{
+
+.bgImg {
   transform: scale(1.5);
   filter: blur(20px);
 }
-.cover{
+
+.cover {
   position: relative;
   width: 100%;
 }
-.cover-title{
+
+.cover-title {
   position: absolute;
   top: 0;
   z-index: 999;
@@ -15,17 +18,77 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 95%
+  width: 95%;
 }
-.cover-title>view{
+
+.cover-title>view {
   width: 50%;
 }
-.cover-title image{
+
+.cover-title image {
   width: 45%;
   border-radius: 10rpx;
 }
-.titleName{
+
+.titleName {
   font-size: 34rpx;
   color: #fff;
-  white-space:normal;
+  white-space: normal;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+  color: #dbdae5;
+}
+
+.nickName {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+  color: #dbdae5;
+}
+
+.description view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 45rpx;
+}
+
+.playCount {
+  position: absolute;
+  right: 57%;
+  top: 25rpx;
+  color: #fff;
+  font-size: 25rpx;
+}
+
+.playCount text:first-child {
+  margin-right: 10rpx;
+  font-size: 25rpx;
+}
+
+.other-operation {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 350rpx;
+  margin:20rpx; 
+  color: #fff;
+  width: 95%;
+  font-size: 40rpx;
+  text-align: center;
+}
+.other-operation view view:last-child{
+  margin-top: 10rpx;
+  font-size: 30rpx;
 }
