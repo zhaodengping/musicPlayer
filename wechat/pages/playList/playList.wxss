@@ -1,4 +1,4 @@
-/* pages/playList/playList.wxss */
+/* pages/playList/playList.wxss */ 
 .more{
   position: absolute;
   right: 0;

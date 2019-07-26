@@ -10,7 +10,7 @@
       <image src="{{playList.coverImgUrl}}" mode='widthFix'></image>
       <text class='playCount'>
         <text class='iconfont iconicon-1'></text>
-      <text>{{play.number}}<text wx:if="{{play.flag}}">万</text></text>
+        <text>{{play.number}}<text wx:if="{{play.flag}}">万</text></text>
       </text>
       <view>
         <view class='titleName'>{{playList.name}}</view>
@@ -44,7 +44,7 @@
       </view>
     </view>
   </view>
-  <view>
+  <view class="play-list">
     <view>
       <text class='iconfont iconbofang'></text>
       

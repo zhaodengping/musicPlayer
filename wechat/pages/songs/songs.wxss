@@ -46,6 +46,9 @@
 .nickName {
   margin-left: 10rpx;
   font-size: 30rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 
 .description {
@@ -88,7 +91,18 @@
   font-size: 40rpx;
   text-align: center;
 }
+
+.other-operation view view:first-child{
+    font-size: 35rpx;
+}
+
 .other-operation view view:last-child{
   margin-top: 10rpx;
-  font-size: 30rpx;
+  font-size: 25rpx;
+}
+
+.play-list{
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    background-color: #fff;
 }

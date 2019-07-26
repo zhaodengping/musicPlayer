@@ -37,7 +37,8 @@ Page({
     this.data.loginInfo.password=allValues.password;
   },
   login(){
-    wx.redirectTo({
+    console.log("登陆")
+    wx.switchTab({
       url: '../home/home',
     })
   },

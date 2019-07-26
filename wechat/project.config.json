@@ -12,10 +12,11 @@
 		"nodeModules": true,
 		"autoAudits": false,
 		"uglifyFileName": true,
-		"checkInvalidKey": true
+		"checkInvalidKey": true,
+        "checkSiteMap":false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.2",
+	"libVersion": "2.7.7",
 	"appid": "wxabd247669d0d65ea",
 	"projectname": "wechat",
 	"debugOptions": {
